@@ -12,9 +12,9 @@ description = """
 - **Smooth camera**, with a cinematic over-the-shoulder view in third person.
 - **Bows, tridents and thrown items** aim for drop and target movement.
 - **Aim assist** optionally nudges aim toward a mob under the crosshair when not locked.
-- Adjustable in-game: Options > Mods > Enemy Target Lock > Config.
+- Adjustable in-game: Options > Mods > Enemy Target Lock > Config (the master toggle is above **Target Players**).
 
-**Multiplayer:** targeting and aim assistance are off by default. LAN hosting requires **Allow LAN Friends** to be explicitly enabled; dedicated servers require `allow_lock_on = true`. Unknown or lost host permission stays disabled. [How it works](https://github.com/GoodDay360/enemy-target-lock#multiplayer-and-fair-play).
+**Multiplayer:** the integrated-world owner is always allowed; LAN guests require the host's explicit **Allow LAN Friends** opt-in, off by default. Dedicated servers require `allow_lock_on = true`, also off by default. Unknown or lost host permission stays disabled; clients disconnect if a server does not support the permission handshake. [How it works](https://github.com/GoodDay360/enemy-target-lock#multiplayer-and-fair-play).
 
 ![Locked onto a pillager](https://raw.githubusercontent.com/GoodDay360/enemy-target-lock/main/screenshots/1.jpg)
 
@@ -36,5 +36,5 @@ version = "0.1.0"
 published = "2026-11-24"
 game = "26.3"
 file = "enemy_target_lock-0.1.0.hmod"
-sha256 = "bbd090957c190ffdd729a21d5dfb4f260d593e25c793870b839b54a633549e72"
-changelog = "Permission correction: LAN and dedicated-server access now default off, missing server keys fail closed, unknown solo status stays disabled, affirmative permission is bound to the current connection, revocation reaches existing guests, and lost updates expire permission. Listing disclosure now identifies player targeting, automatic aim adjustment, click redirection, and multiplayer defaults. Pinned to Horizon f1bb66f and Horizon Mixins e59da90."
+sha256 = "565c0a24900c80dbe224d0aaeb7023fb10481b067c8181b01e0dcf6ec651e5af"
+changelog = "Added an in-game Enemy Target Lock master toggle above Target Players. The integrated-world owner is always allowed; LAN guests still need fresh affirmative permission, and dedicated-server permission defaults off. Unsupported permission handshakes disconnect the client; connection changes clear grants, old protocol answers are ignored, revocation is immediate, and lost updates expire permission. Pinned to Horizon f1bb66f and Horizon Mixins e59da90."
