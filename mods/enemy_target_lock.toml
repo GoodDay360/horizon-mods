@@ -14,7 +14,7 @@ description = """
 - **Aim assist** optionally nudges aim toward a mob under the crosshair when not locked.
 - Adjustable in-game: Options > Mods > Enemy Target Lock > Config (the master toggle is above **Target Players**).
 
-**Multiplayer:** the integrated-world owner is always allowed; LAN guests require the host's explicit **Allow LAN Friends** opt-in, off by default. Dedicated servers require `allow_lock_on = true`, also off by default. Unknown or lost host permission stays disabled; clients disconnect if a server does not support the permission handshake. [How it works](https://github.com/GoodDay360/enemy-target-lock#multiplayer-and-fair-play).
+**Multiplayer:** the integrated-world owner is always allowed; LAN guests require the host's explicit **Allow LAN Friends** opt-in, off by default. Dedicated servers require `allow_lock_on = true`, also off by default. Guests disconnect when the host denies or revokes permission; clients also disconnect if a server does not support the permission handshake. Unknown or lost host permission stays disabled. [How it works](https://github.com/GoodDay360/enemy-target-lock#multiplayer-and-fair-play).
 
 ![Locked onto a pillager](https://raw.githubusercontent.com/GoodDay360/enemy-target-lock/main/screenshots/1.jpg)
 
