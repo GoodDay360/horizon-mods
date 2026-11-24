@@ -3,7 +3,7 @@ kind = "native-mod"
 name = "Enemy Target Lock"
 summary = "Middle-click to lock the camera onto the mob nearest your view center; scroll to switch targets."
 description = """
-**Lock onto a mob and fight without wrestling the camera.**
+**Lock onto a mob, inspired by soulslike games.**
 
 - **Middle-click** to lock onto the mob nearest your view; again to release.
 - **Scroll** to switch targets left or right.
