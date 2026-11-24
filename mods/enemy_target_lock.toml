@@ -1,17 +1,20 @@
 id = "enemy_target_lock"
 kind = "native-mod"
 name = "Enemy Target Lock"
-summary = "Middle-click to lock the camera onto the mob nearest your view center; scroll to switch targets."
+summary = "Lock onto mobs or players, adjust aim, and redirect clicks, with fail-closed multiplayer permission."
 description = """
 **Lock onto a mob, inspired by soulslike games.**
 
-- **Middle-click** to lock onto the mob nearest your view; again to release.
+- **Middle-click** to lock onto the mob or player nearest your view; again to release.
 - **Scroll** to switch targets left or right.
+- **Automatic aim adjustment** turns your real aim toward the target while locked.
+- **Left/right clicks** are redirected to the locked target instead of the crosshair ray.
 - **Smooth camera**, with a cinematic over-the-shoulder view in third person.
-- **Bows, tridents and thrown items** aim for drop and movement.
+- **Bows, tridents and thrown items** aim for drop and target movement.
+- **Aim assist** optionally nudges aim toward a mob under the crosshair when not locked.
 - Adjustable in-game: Options > Mods > Enemy Target Lock > Config.
 
-**Multiplayer:** lock-on works only where the host has this mod and allows it (your own worlds, LAN, servers that install it); always off everywhere else. [How it works](https://github.com/GoodDay360/enemy-target-lock#multiplayer-and-fair-play).
+**Multiplayer:** targeting and aim assistance are off by default. LAN hosting requires **Allow LAN Friends** to be explicitly enabled; dedicated servers require `allow_lock_on = true`. Unknown or lost host permission stays disabled. [How it works](https://github.com/GoodDay360/enemy-target-lock#multiplayer-and-fair-play).
 
 ![Locked onto a pillager](https://raw.githubusercontent.com/GoodDay360/enemy-target-lock/main/screenshots/1.jpg)
 
@@ -33,5 +36,5 @@ version = "0.1.0"
 published = "2026-11-24"
 game = "26.3"
 file = "enemy_target_lock-0.1.0.hmod"
-sha256 = "2236abf9dedb9bee07c1ddd1c8608599075a74d9a318de9490ecb873fe883d38"
-changelog = "First release. Pinned to Horizon f1bb66f and Horizon Mixins e59da90."
+sha256 = "bbd090957c190ffdd729a21d5dfb4f260d593e25c793870b839b54a633549e72"
+changelog = "Permission correction: LAN and dedicated-server access now default off, missing server keys fail closed, unknown solo status stays disabled, affirmative permission is bound to the current connection, revocation reaches existing guests, and lost updates expire permission. Listing disclosure now identifies player targeting, automatic aim adjustment, click redirection, and multiplayer defaults. Pinned to Horizon f1bb66f and Horizon Mixins e59da90."
